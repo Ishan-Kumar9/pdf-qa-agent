@@ -1,24 +1,25 @@
 # 📄 PDF Q&A Agent
 
-A RAG-based PDF Question Answering application that allows users to
-upload a PDF and ask questions about its content.
+Upload a PDF and ask questions about its content using an Agentic RAG pipeline.
 
 ## Features
 
-- Upload PDF documents
-- Extract and chunk PDF text
-- Generate embeddings
-- Store embeddings in ChromaDB
-- Semantic similarity search
-- Generate answers using Qwen3 4B
-- Local LLM inference using Ollama
-- Display source pages
+- PDF upload
+- Semantic search with ChromaDB
+- Qwen3-based answers
+- Agentic RAG with LangGraph
+- Retrieval evaluation
+- Query rewriting
+- Retry mechanism
+- Source page references
+- No-answer fallback
 
 ## Tech Stack
 
 - Python
 - Streamlit
 - LangChain
+- LangGraph
 - PyPDF
 - Sentence Transformers
 - ChromaDB
@@ -29,4 +30,5 @@ upload a PDF and ask questions about its content.
 
 ```bash
 pip install -r requirements.txt
+ollama pull qwen3:4b
 streamlit run app.py
